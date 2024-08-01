@@ -68,6 +68,68 @@
         .sent-message {
             color: green;
         }
+        
+   
+
+
+        form {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .link {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #e9e9e9;
+        }
+
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
     </style>
 
     <meta content="" name="description">
@@ -132,7 +194,7 @@
             </div>
 
             <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
-                <h2><br><span>soluciones ERP y CRM</span><br>para su empresa!</h2>
+                <h2><br><span>Soluciones ERP y CRM</span><br>para su empresa!</h2>
                 <div>
                     <a href="#about" class="btn-get-started scrollto">Comencemos</a>
                     <a href="#services" class="btn-services scrollto">nuestros Servicios</a>
@@ -344,122 +406,197 @@
                 </div>
 
                 <div class="form" data-aos="fade-up" data-aos-delay="100">
-                    <div id="errormessage"></div>
-                    <form action="" method="post" role="form" class="php-email-form">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres">
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo válido">
-                                <div class="validate"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor ingrese al menos 8 caracteres del asunto">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba algo para nosotros" placeholder="Mensaje"></textarea>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="loading">Cargando</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Su mensaje ha sido enviado. ¡Gracias!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-                    </form>
-                </div>
+                  <div id="errormessage"></div>
+                  <form action="#" method="post" role="form" class="php-email-form">
+                      <div class="form-row">
+                          <div class="form-group col-md-6">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres">
+                              <div class="validate"></div>
+                          </div>
+                          <div class="form-group col-md-6">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingrese un correo válido">
+                              <div class="validate"></div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:8" data-msg="Por favor ingrese al menos 8 caracteres del asunto">
+                          <div class="validate"></div>
+                      </div>
+                      <div class="form-group">
+                          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba algo para nosotros" placeholder="Mensaje"></textarea>
+                          <div class="validate"></div>
+                      </div>
+                      <div class="mb-3">
+                          <div class="loading">Cargando</div>
+                          <div class="error-message"></div>
+                          <div class="sent-message">Su mensaje ha sido enviado. ¡Gracias!</div>
+                      </div>
+                      <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+                  </form>
+              </div>
+          </div>
+          <title>Agendar Reunión con Jitsi Meet</title>
+  
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("TU_USER_ID"); // Reemplaza con tu User ID de EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <h1>Agendar Reunión con Jitsi Meet</h1>
+    <form id="scheduleForm">
+        <label for="email">Tu Correo Electrónico:</label>
+        <input type="email" id="email" required name="email">
 
-            </div>
-        </section><!-- End Contact Section -->
+        <label for="meetingName">Nombre de la Reunión:</label>
+        <input type="text" id="meetingName" name="meetingName" required>
 
-    </main>
+        <label for="meetingDate">Fecha y Hora de la Reunión:</label>
+        <input type="datetime-local" id="meetingDate" name="meetingDate" required>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
+        <button type="submit">Agendar Reunión</button>
+    </form>
 
-                    <div class="col-lg-4 col-md-6 footer-info">
-                        <h3>Planexia</h3>
-                        <p>Somos una empresa dedicada a proporcionar soluciones empresariales y tecnológicas, mejorando la eficiencia y la toma de decisiones en tu empresa.</p>
-                    </div>
+    <div id="meetingLink" class="link" style="display:none;">
+        <h2>Enlace de la Reunión:</h2>
+        <a href="#" id="jitsiLink" target="_blank"></a>
+    </div>
 
-                    <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Enlaces Útiles</h4>
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Socios</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Contacto</a></li>
-                        </ul>
-                    </div>
+    <div id="statusMessage" class="alert" style="display:none;"></div>
 
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Nuestra Newsletter</h4>
-                        <p>Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribir">
-                        </form>
-                    </div>
+    
+      </section><!-- End Contact Section -->
 
-                </div>
-            </div>
-        </div>
+  </main><!-- End #main -->
 
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>NewBiz</strong>. Todos los derechos reservados.
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/newbiz-bootstrap-business-template/ -->
-                Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-    </footer><!-- End Footer -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-md-6 footer-info">
+                      <h3>Planexia</h3>
+                      <p>Somos una empresa dedicada a proporcionar soluciones empresariales y tecnológicas, mejorando la eficiencia y la toma de decisiones en tu empresa.</p>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-links">
+                      <h4>Enlaces Útiles</h4>
+                      <ul>
+                          <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+                          <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre Nosotros</a></li>
+                          <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+                          <li><i class="bi bi-chevron-right"></i> <a href="#">Socios</a></li>
+                          <li><i class="bi bi-chevron-right"></i> <a href="#">Contacto</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4 col-md-6 footer-newsletter">
+                      <h4>Nuestro Boletín</h4>
+                      <p>Subscríbete para recibir las últimas noticias y actualizaciones.</p>
+                      <form action="" method="post">
+                          <input type="email" name="email"><input type="submit" value="Subscribir">
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="copyright">
+              &copy; Copyright <strong>NewBiz</strong>. Todos los derechos reservados.
+          </div>
+          <div class="credits">
+              Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+      </div>
+  </footer><!-- End Footer -->
 
-    <a href="#" class="back-to-top"><i class="bi bi-chevron-up"></i></a>
-    <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bi bi-chevron-up"></i></a>
+  <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-    <!-- Script to handle scheduling and generating Jitsi Meet link -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.querySelector(".php-email-form");
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
+  <!-- Script to handle scheduling and generating Jitsi Meet link -->
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const form = document.querySelector(".php-email-form");
+          form.addEventListener("submit", function (event) {
+              event.preventDefault();
 
-                const name = document.querySelector("#name").value;
-                const email = document.querySelector("#email").value;
-                const subject = document.querySelector("#subject").value;
-                const message = document.querySelector("#message").value;
+              const name = document.querySelector("#name").value;
+              const email = document.querySelector("#email").value;
+              const subject = document.querySelector("#subject").value;
+              const message = document.querySelector("#message").value;
 
-                const jitsiDomain = "meet.jit.si";
-                const meetingId = subject.split(" ").join("");
-                const jitsiLink = `https://${jitsiDomain}/${meetingId}`;
+              const jitsiDomain = "meet.jit.si";
+              const meetingId = subject.split(" ").join("");
+              const jitsiLink = `https://${jitsiDomain}/${meetingId}`;
 
-                alert(`Reunión agendada exitosamente.\n\nEnlace de Jitsi Meet: ${jitsiLink}`);
+              alert(`Reunión agendada exitosamente.\n\nEnlace de Jitsi Meet: ${jitsiLink}`);
+          });
+      });
+  </script>
+  <script>
+        document.getElementById('scheduleForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene el envío del formulario
+
+            // Obtener valores del formulario
+            const email = document.getElementById('email').value;
+            const meetingName = document.getElementById('meetingName').value;
+            const meetingDate = document.getElementById('meetingDate').value;
+
+            // Formatear la fecha para mostrar
+            const formattedDate = new Date(meetingDate).toLocaleString('es-ES', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
             });
+
+            // Generar un nombre de sala único basado en la fecha y el nombre
+            const roomName = meetingName.replace(/\s+/g, '') + '-' + new Date(meetingDate).getTime();
+
+            // Crear el enlace de Jitsi
+            const jitsiURL = `https://meet.jit.si/${roomName}`;
+
+            // Mostrar el enlace de la reunión
+            document.getElementById('jitsiLink').textContent = `Reunión: ${meetingName} el ${formattedDate}`;
+            document.getElementById('jitsiLink').href = jitsiURL;
+            document.getElementById('meetingLink').style.display = 'block';
+
+            // Configurar parámetros de EmailJS
+            const templateParams = {
+                email: email,
+                meeting_name: meetingName,
+                meeting_date: formattedDate,
+                jitsi_url: jitsiURL,
+                personal_email: 'planexia.sa@gmail.com' // Reemplaza con tu correo personal
+            };
+
+            // Enviar correo usando EmailJS
+            emailjs.send('service_y99ax2q', 'template_uhnoq0x', templateParams)
+                .then(response => {
+                    console.log('Correo enviado:', response.status, response.text);
+                    showMessage('Correo enviado correctamente.', 'success');
+                }, error => {
+                    console.error('Error al enviar correo:', error);
+                    showMessage('Error al enviar correo. Inténtalo nuevamente.', 'error');
+                });
         });
+
+        function showMessage(message, type) {
+            const statusMessage = document.getElementById('statusMessage');
+            statusMessage.textContent = message;
+            statusMessage.className = `alert ${type}`;
+            statusMessage.style.display = 'block';
+        }
     </script>
 
 </body>

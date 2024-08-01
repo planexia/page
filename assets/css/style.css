@@ -14,7 +14,26 @@ body {
   color: #444;
   font-family: "Open Sans", sans-serif;
 }
+#scheduled-meetings {
+  margin-top: 30px;
+}
 
+#meeting-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#meeting-list .list-group-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#meeting-list .btn {
+  margin-top: 10px;
+}
 a {
   color: #007bff;
   text-decoration: none;
