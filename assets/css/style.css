@@ -1242,8 +1242,10 @@ section {
 #contact .info p {
   padding: 0 0 10px 36px;
   line-height: 28px;
-  font-size: 14px;
-  color:white;
+  font-size: 11px;
+  color: white;
+  margin: 0% 0% 0% -1%;
+
 }
 
 #contact .php-email-form .error-message {
