@@ -74,21 +74,21 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/logo-planexia.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-planexia.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="vendor/aos/aos.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NewBiz
@@ -101,53 +101,7 @@
 </head>
 
 <body>
-  < <script>
-    // Configura Firebase
-    const firebaseConfig = {
-      apiKey: "TU_API_KEY",
-      authDomain: "TU_DOMINIO.firebaseapp.com",
-      projectId: "TU_PROJECT_ID",
-      storageBucket: "TU_STORAGE_BUCKET.appspot.com",
-      messagingSenderId: "TU_SENDER_ID",
-      appId: "TU_APP_ID"
-    };
-    
-    // Inicializa Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore(app);
 
-    // Al enviar el formulario
-    document.getElementById('contactForm').addEventListener('submit', async function (e) {
-      e.preventDefault();
-      
-      // Mostrar el estado de carga
-      document.querySelector('.loading').style.display = 'block';
-
-      // Obtén los valores del formulario
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.querySelector('textarea[name="message"]').value;
-      const sendDate = new Date().toISOString().substr(0, 10); // Fecha actual
-
-      try {
-        // Guarda los datos en Firestore
-        await db.collection('messages').add({
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-          sendDate: sendDate
-        });
-
-        // Oculta el estado de carga y muestra el mensaje de éxito
-        document.querySelector('.loading').style.display = 'none';
-        document.querySelector('.sent-message').style.display = 'block';
-      } catch (error) {
-        console.error('Error al enviar el mensaje: ', error);
-      }
-    });
-  </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between">
@@ -155,7 +109,7 @@
       <div class="logo">
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1><a href="index.html">NewBiz</a></h1> -->
-        <a href="index.html"><img src="img/logo-planexia.png" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="assets/img/logo-planexia.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -179,7 +133,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="img/hero-img.svg" alt="" class="img-fluid">
+        <img src="assets/img/hero-img.svg" alt="" class="img-fluid">
       </div>
 
       <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
@@ -254,13 +208,13 @@ Te ayudamos con:
           </div>
 
           <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
-            <img src="img/about-img.svg" class="img-fluid" alt="">
+            <img src="assets/img/about-img.svg" class="img-fluid" alt="">
           </div>
         </div>
 
         <div class="row about-extra">
           <div class="col-lg-6" data-aos="fade-right">
-              <img src="img/about-extra-1.svg" class="img-fluid" alt="Imagen relacionada con soluciones ERP y CRM">
+              <img src="assets/img/about-extra-1.svg" class="img-fluid" alt="Imagen relacionada con soluciones ERP y CRM">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
               <h4>Transformación digital con soluciones integrales</h4>
@@ -276,12 +230,12 @@ Te ayudamos con:
 
         <div class="row about-extra">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="img/about-extra-2.svg" class="img-fluid" alt="">
+            <img src="assets/img/about-extra-2.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
             <h4>Soluciones ERP && CRM con Dolibarr</h4>
-            <img src="img/dolibarr_logo.jpg" class="img-fluid mb-3" alt="Dolibarr ERP/CRM">
+            <img src="assets/img/dolibarr_logo.jpg" class="img-fluid mb-3" alt="Dolibarr ERP/CRM">
             <p>
                 Dolibarr es una solución ERP Y CRM de código abierto que ofrece una gestión integrada para empresas de todos los tamaños. Con Dolibarr, puedes automatizar procesos administrativos como contabilidad, facturación, gestión de proyectos, inventario y más.
             </p>
@@ -681,7 +635,7 @@ Te ayudamos con:
           <div class="row justify-content-center">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-out" data-aos-delay="100">
                 <div class="member">
-                    <img src="img/lucho.jpeg" class="img-fluid" alt="">
+                    <img src="assets/img/lucho.jpeg" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                             <h4>Luis Paulo Ruiz Pereira</h4>
@@ -698,7 +652,7 @@ Te ayudamos con:
         
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-out" data-aos-delay="200">
                 <div class="member">
-                    <img src="img/beto.png" class="img-fluid" alt="">
+                    <img src="assets/img/beto.png" class="img-fluid" alt="">
                     <div class="member-info">
                         <div class="member-info-content">
                             <h4>Roberto Andres Ruiz Periera</h4>
@@ -858,58 +812,36 @@ Te ayudamos con:
             </div>
 
             <div class="form">
-              <form id="contact-form" role="form" class="php-email-form"  action="https://formspree.io/f/mvgpyjll"
-              method="POST">
-                  <div class="row">
-                      <div class="form-group col-lg-6">
-                          <input type="text" name="name" class="form-control" id="name" placeholder="Su nombre" required>
-                      </div>
-                      <div class="form-group col-lg-6">
-                          <input type="email" class="form-control" name="email" id="email" placeholder="Su Email" required>
-                      </div>
+              <form   action="https://formspree.io/f/mvgpyjll"
+              method="POST"
+             class="php-email-form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://planexia.github.io/page/">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="send_date" id="send_date"> <!--Campo oculto para la fecha de envío -->
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Su nombre" required>
                   </div>
-                  <div class="form-group">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Su Email" required>
                   </div>
-                  <div class="form-group">
-                      <textarea class="form-control" name="message" rows="5" placeholder="mensaje" required></textarea>
-                  </div>
-                  <div class="my-3">
-                      <div class="loading">Cargando</div>
-                      <div class="sent-message">Su mensaje se envió con éxito. ¡Muchas gracias!</div>
-                  </div>
-                  <div class="text-center">
-                      <button type="submit" title="Send Message">Enviar mensaje</button>
-                  </div>
-              </form>
-          </div>
-          
-          <!-- Agregamos el script de EmailJS -->
-          <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-          <script type="text/javascript">
-              (function(){
-                  emailjs.init("VIc4jkhfrzRc-G9pv"); // Reemplaza "TU_USER_ID" con tu User ID de EmailJS
-              })();
-          
-              document.getElementById('contact-form').addEventListener('submit', function(event) {
-                  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="mensaje" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Cargando</div>
                   
-                  // Ocultar mensajes anteriores
-                  document.querySelector('.loading').style.display = 'block';
-                  document.querySelector('.sent-message').style.display = 'none';
-          
-                  // Enviar el formulario a través de EmailJS
-                  emailjs.sendForm('service_x3xhw7m', 'template_pv57fmm', this)
-                      .then(function() {
-                          document.querySelector('.loading').style.display = 'none';
-                          document.querySelector('.sent-message').style.display = 'block';
-                      }, function(error) {
-                          alert('Hubo un problema al enviar el correo: ' + error.text);
-                      });
-              });
-          </script>
-          
-            
+                  <div class="sent-message">Su mensaje se envió con éxito. ¡Muchas gracias!</div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" title="Send Message">Enviar mensaje</button>
+                </div>
+              </form>
             </div>
           
             <script>
@@ -1038,12 +970,12 @@ Te ayudamos con:
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="vendor/aos/aos.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
   <!-- <script>
@@ -1076,12 +1008,7 @@ Te ayudamos con:
     });
     </script> -->
   <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function(){
-          emailjs.init("TU_USER_ID"); // Reemplaza "TU_USER_ID" con tu User ID de EmailJS
-      })();
-  </script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
